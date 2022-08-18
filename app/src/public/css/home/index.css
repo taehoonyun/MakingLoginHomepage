@@ -1,0 +1,103 @@
+body{
+    background-color: black;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color:  gray;
+    color: white;
+    align-items: center;
+    border-radius: 10px;
+    border: 10px;
+    border-color: aliceblue;
+    /* margin: 20px 8px; */
+    /* padding: 10px; */
+}
+
+.title{
+    color: tomato;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title i{
+    color:yellow;
+}
+
+.options{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    
+}
+
+.options li{
+    margin: 20px 8px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    
+}
+
+.options li:hover {
+    background-color:orange;
+    border-radius: 4px;
+}
+
+.icons{
+    margin: auto 0px;
+    color: palegreen;
+    /* width: 100%; */
+}
+
+.icons i{
+    margin: auto 5px;
+    padding: 0;
+}
+
+.more{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 12px;
+     
+    }
+    .options{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    
+    }
+
+    .options li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .icons{
+        width: 100%;
+        justify-content: center;
+       align-items: center;
+        display: none;
+    }
+    .more{
+        display: block;
+    }
+    .options.active, .icons.active{
+        display: flex;
+
+    }
+}
